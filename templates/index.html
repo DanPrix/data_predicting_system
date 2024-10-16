@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+        <meta charset="UTF-8"> 
+        <title>ВХОД</title> 
+</head> 
+<body> 
+    <form action="/login" method="post"> 
+        <label for="username">Логин:</label> 
+        <input type="text" id="username" name="username"> 
+        <label for="password">Пароль:</label> 
+        <input type="password" id="password" name="password"> 
+        <button type="submit" value="login">Вход</button> 
+    </form> 
+
+    {% if error %} 
+    <script> alert("{{ error }}"); </script> 
+    {% endif %} 
+</body> 
+</html>
